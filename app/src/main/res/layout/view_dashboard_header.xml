@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Saludo de los dashboards (vendedor y administrador). -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/screen_padding"
+    android:paddingTop="@dimen/space_sm"
+    android:paddingEnd="@dimen/screen_padding">
+
+    <TextView
+        android:id="@+id/tvGreeting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.Agro.Title"
+        android:textColor="@color/agro_white"
+        tools:text="Bienvenido, Carlos" />
+
+    <TextView
+        android:id="@+id/tvSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.Agro.Body"
+        android:textColor="@color/agro_white_70"
+        tools:text="Hacienda El Progreso" />
+</LinearLayout>

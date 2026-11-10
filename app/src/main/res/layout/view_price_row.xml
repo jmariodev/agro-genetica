@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Fila etiqueta / valor del resumen de compra. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/space_sm"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tvLabel"
+        style="@style/Widget.Agro.Text.Secondary"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        tools:text="@string/summary_subtotal" />
+
+    <TextView
+        android:id="@+id/tvValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.Agro.Body"
+        tools:text="$1.420.000" />
+</LinearLayout>

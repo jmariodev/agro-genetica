@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Tarjeta del vendedor (detalle de producto y ejemplar vivo). -->
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Widget.Agro.Card.Filled"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/space_base">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/space_base">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="@dimen/avatar_sm"
+            android:layout_height="@dimen/avatar_sm"
+            android:background="@color/agro_primary_light"
+            android:importantForAccessibility="no"
+            android:padding="@dimen/space_md"
+            android:src="@drawable/ic_person"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.Agro.Circle"
+            app:tint="@color/agro_primary" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_md"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvSellerName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.Agro.SubtitleStrong"
+                tools:text="Hacienda El Progreso" />
+
+            <TextView
+                android:id="@+id/tvSellerLocation"
+                style="@style/Widget.Agro.Text.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/space_xs"
+                android:gravity="center_vertical"
+                app:drawableStartCompat="@drawable/ic_location"
+                app:drawableTint="@color/agro_text_secondary"
+                tools:text="Montería, Córdoba" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvVerified"
+            style="@style/Widget.Agro.Badge"
+            android:text="@string/badge_verified" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

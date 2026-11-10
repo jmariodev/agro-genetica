@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Métrica compacta (perfil del vendedor y resumen del reporte). -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/space_base"
+    android:paddingBottom="@dimen/space_base">
+
+    <TextView
+        android:id="@+id/tvValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.Agro.Stat"
+        android:textColor="@color/agro_primary"
+        tools:text="24" />
+
+    <TextView
+        android:id="@+id/tvLabel"
+        style="@style/Widget.Agro.Text.Caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="@string/stat_products" />
+</LinearLayout>

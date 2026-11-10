@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Campo de texto para diálogos (motivo de rechazo, dirección de envío). -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/space_lg"
+    android:paddingTop="@dimen/space_sm"
+    android:paddingEnd="@dimen/space_lg">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine|textCapSentences"
+            android:minLines="2" />
+    </com.google.android.material.textfield.TextInputLayout>
+</FrameLayout>

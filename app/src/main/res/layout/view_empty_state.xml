@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Estado vacío reutilizable (listas sin resultados). -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="@dimen/space_xl"
+    android:visibility="gone"
+    tools:visibility="visible">
+
+    <ImageView
+        android:id="@+id/ivEmpty"
+        android:layout_width="@dimen/biometric_inner"
+        android:layout_height="@dimen/biometric_inner"
+        android:background="@drawable/bg_circle"
+        android:backgroundTint="@color/agro_primary_light"
+        android:importantForAccessibility="no"
+        android:padding="@dimen/space_xl"
+        android:src="@drawable/ic_search"
+        app:tint="@color/agro_primary" />
+
+    <TextView
+        android:id="@+id/tvEmptyTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_base"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.Agro.Title"
+        tools:text="@string/empty_results_title" />
+
+    <TextView
+        android:id="@+id/tvEmptyBody"
+        style="@style/Widget.Agro.Text.Secondary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_xs"
+        android:gravity="center"
+        tools:text="@string/empty_results_body" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnEmptyAction"
+        style="@style/Widget.Agro.Button.Soft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_base"
+        android:visibility="gone"
+        tools:text="@string/cart_explore"
+        tools:visibility="visible" />
+</LinearLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Acceso rápido del panel de administración. -->
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/space_xs"
+    android:layout_weight="1"
+    android:clickable="true"
+    android:focusable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/space_base">
+
+        <ImageView
+            android:id="@+id/ivIcon"
+            android:layout_width="@dimen/icon_lg"
+            android:layout_height="@dimen/icon_lg"
+            android:importantForAccessibility="no"
+            app:tint="@color/agro_primary"
+            tools:src="@drawable/ic_users" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_sm"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.Agro.Subtitle"
+            tools:text="@string/qa_users" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

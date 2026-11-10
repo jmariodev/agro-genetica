@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/dashboardFragment"
+        android:icon="@drawable/ic_dashboard"
+        android:title="@string/nav_panel" />
+    <item
+        android:id="@+id/usersFragment"
+        android:icon="@drawable/ic_users"
+        android:title="@string/nav_users" />
+    <item
+        android:id="@+id/adminProductsFragment"
+        android:icon="@drawable/ic_box"
+        android:title="@string/nav_products" />
+    <item
+        android:id="@+id/reportsFragment"
+        android:icon="@drawable/ic_chart"
+        android:title="@string/nav_reports" />
+</menu>

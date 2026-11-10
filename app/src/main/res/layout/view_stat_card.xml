@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Tarjeta de métrica de los dashboards (vendedor y administrador). -->
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Widget.Agro.Card.Elevated"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/space_xs"
+    android:layout_weight="1">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/space_base">
+
+        <ImageView
+            android:id="@+id/ivIcon"
+            android:layout_width="@dimen/icon_box"
+            android:layout_height="@dimen/icon_box"
+            android:background="@drawable/bg_rounded"
+            android:backgroundTint="@color/agro_primary_light"
+            android:importantForAccessibility="no"
+            android:padding="@dimen/space_sm"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/agro_primary"
+            tools:src="@drawable/ic_dollar" />
+
+        <TextView
+            android:id="@+id/tvTrend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.Agro.LabelMedium"
+            android:textColor="@color/agro_tertiary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="+12%" />
+
+        <TextView
+            android:id="@+id/tvValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_md"
+            android:maxLines="1"
+            android:textAppearance="@style/TextAppearance.Agro.Stat"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivIcon"
+            tools:text="$4.5M" />
+
+        <TextView
+            android:id="@+id/tvLabel"
+            style="@style/Widget.Agro.Text.Caption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvValue"
+            tools:text="@string/stat_total_sales" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

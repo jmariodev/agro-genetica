@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Opción navegable del perfil (ícono + texto + chevron). -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:gravity="center_vertical"
+    android:minHeight="@dimen/button_height"
+    android:orientation="horizontal"
+    android:paddingStart="@dimen/space_base"
+    android:paddingEnd="@dimen/space_base">
+
+    <ImageView
+        android:id="@+id/ivIcon"
+        android:layout_width="@dimen/icon_md"
+        android:layout_height="@dimen/icon_md"
+        android:importantForAccessibility="no"
+        app:tint="@color/agro_neutral_text" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_base"
+        android:layout_weight="1"
+        android:textAppearance="@style/TextAppearance.Agro.Subtitle"
+        tools:text="@string/profile_settings" />
+
+    <ImageView
+        android:id="@+id/ivChevron"
+        android:layout_width="@dimen/icon_sm"
+        android:layout_height="@dimen/icon_sm"
+        android:importantForAccessibility="no"
+        android:src="@drawable/ic_chevron_right"
+        app:tint="@color/agro_text_hint" />
+</LinearLayout>

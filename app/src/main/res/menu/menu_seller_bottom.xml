@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/dashboardFragment"
+        android:icon="@drawable/ic_dashboard"
+        android:title="@string/nav_dashboard" />
+    <item
+        android:id="@+id/sellerProductsFragment"
+        android:icon="@drawable/ic_box"
+        android:title="@string/nav_products" />
+    <item
+        android:id="@+id/ordersFragment"
+        android:icon="@drawable/ic_orders"
+        android:title="@string/nav_orders" />
+    <item
+        android:id="@+id/profileFragment"
+        android:icon="@drawable/ic_person"
+        android:title="@string/nav_profile" />
+</menu>
