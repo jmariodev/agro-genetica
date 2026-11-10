@@ -384,7 +384,7 @@
     </style>
 
     <style name="Widget.Agro.Switch" parent="Widget.Material3.CompoundButton.MaterialSwitch">
-        <item name="thumbTint">@color/agro_white</item>
+        <item name="android:textAppearance">@style/TextAppearance.Agro.Subtitle</item>
     </style>
 
     <style name="Widget.Agro.Progress" parent="Widget.Material3.LinearProgressIndicator">

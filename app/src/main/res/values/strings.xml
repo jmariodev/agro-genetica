@@ -377,12 +377,12 @@
     <string name="stat_profile_visits">Visitas al perfil</string>
     <string name="stat_month_orders">Pedidos del mes</string>
     <string name="value_visits">1.2K</string>
-    <string name="trend_sales">+12%</string>
+    <string name="trend_sales" formatted="false">+12%</string>
     <string name="trend_products">+3</string>
-    <string name="trend_visits">+8%</string>
+    <string name="trend_visits" formatted="false">+8%</string>
     <string name="trend_orders">+5</string>
     <string name="trend_users">+45</string>
-    <string name="trend_sales_admin">+18%</string>
+    <string name="trend_sales_admin" formatted="false">+18%</string>
     <string name="seller_recent_orders">Pedidos recientes</string>
     <string name="quick_actions">Acciones rápidas</string>
     <string name="seller_new_semen">Nueva pajilla</string>
