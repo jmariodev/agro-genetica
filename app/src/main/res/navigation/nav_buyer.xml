@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Navegación del rol Comprador. -->
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_buyer"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.jmariodev.agrodigital.ui.buyer.home.HomeFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_buyer_home">
+        <action
+            android:id="@+id/action_home_to_detail"
+            app:destination="@id/productDetailFragment" />
+        <action
+            android:id="@+id/action_home_to_live"
+            app:destination="@id/liveDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/catalogFragment"
+        android:name="com.jmariodev.agrodigital.ui.buyer.catalog.CatalogFragment"
+        android:label="@string/nav_catalog"
+        tools:layout="@layout/fragment_buyer_catalog">
+        <argument
+            android:name="type"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="openFilters"
+            android:defaultValue="false"
+            app:argType="boolean" />
+        <action
+            android:id="@+id/action_catalog_to_detail"
+            app:destination="@id/productDetailFragment" />
+        <action
+            android:id="@+id/action_catalog_to_live"
+            app:destination="@id/liveDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/productDetailFragment"
+        android:name="com.jmariodev.agrodigital.ui.common.product.ProductDetailFragment"
+        android:label="@string/product_detail_title"
+        tools:layout="@layout/fragment_product_detail">
+        <argument
+            android:name="productId"
+            app:argType="string" />
+        <argument
+            android:name="mode"
+            android:defaultValue="buy"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/liveDetailFragment"
+        android:name="com.jmariodev.agrodigital.ui.buyer.detail.LiveDetailFragment"
+        android:label="@string/live_detail_title"
+        tools:layout="@layout/fragment_live_detail">
+        <argument
+            android:name="productId"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.jmariodev.agrodigital.ui.buyer.cart.CartFragment"
+        android:label="@string/cart_title"
+        tools:layout="@layout/fragment_buyer_cart">
+        <action
+            android:id="@+id/action_cart_to_checkout"
+            app:destination="@id/checkoutFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/checkoutFragment"
+        android:name="com.jmariodev.agrodigital.ui.buyer.checkout.CheckoutFragment"
+        android:label="@string/checkout_title"
+        tools:layout="@layout/fragment_buyer_checkout">
+        <action
+            android:id="@+id/action_checkout_to_success"
+            app:destination="@id/paymentSuccessFragment"
+            app:popUpTo="@id/homeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/paymentSuccessFragment"
+        android:name="com.jmariodev.agrodigital.ui.buyer.checkout.PaymentSuccessFragment"
+        android:label="@string/payment_success_toolbar"
+        tools:layout="@layout/fragment_payment_success">
+        <argument
+            android:name="orderId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_success_to_orders"
+            app:destination="@id/ordersFragment"
+            app:popUpTo="@id/homeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ordersFragment"
+        android:name="com.jmariodev.agrodigital.ui.common.orders.OrdersFragment"
+        android:label="@string/nav_my_orders"
+        tools:layout="@layout/fragment_orders" />
+
+    <fragment
+        android:id="@+id/orderDetailFragment"
+        android:name="com.jmariodev.agrodigital.ui.common.orders.OrderDetailFragment"
+        android:label="@string/order_detail_title"
+        tools:layout="@layout/fragment_order_detail">
+        <argument
+            android:name="orderId"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.jmariodev.agrodigital.ui.common.profile.ProfileFragment"
+        android:label="@string/nav_my_profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.jmariodev.agrodigital.ui.common.profile.EditProfileFragment"
+        android:label="@string/edit_profile_title"
+        tools:layout="@layout/fragment_edit_profile" />
+</navigation>

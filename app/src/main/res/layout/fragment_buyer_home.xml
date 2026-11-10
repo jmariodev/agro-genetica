@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.buyer.home.HomeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/space_lg">
+
+        <!-- Saludo + buscador sobre fondo verde -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_header_rounded"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/screen_padding"
+            android:paddingTop="@dimen/space_sm"
+            android:paddingEnd="@dimen/screen_padding"
+            android:paddingBottom="@dimen/space_lg">
+
+            <TextView
+                android:id="@+id/tvGreeting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.Agro.Title"
+                android:textColor="@color/agro_white"
+                tools:text="Hola, María" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/home_subtitle"
+                android:textAppearance="@style/TextAppearance.Agro.Body"
+                android:textColor="@color/agro_white_70" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_base"
+                android:orientation="horizontal">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardSearch"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/icon_button_size_large"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:strokeWidth="0dp">
+
+                    <TextView
+                        style="@style/Widget.Agro.Text.Secondary"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:drawablePadding="@dimen/space_md"
+                        android:gravity="center_vertical"
+                        android:paddingStart="@dimen/space_base"
+                        android:paddingEnd="@dimen/space_base"
+                        android:text="@string/hint_search_genetics"
+                        app:drawableStartCompat="@drawable/ic_search"
+                        app:drawableTint="@color/agro_text_secondary" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnFilters"
+                    style="@style/Widget.Agro.Button.IconOnly"
+                    android:layout_width="@dimen/icon_button_size_large"
+                    android:layout_height="@dimen/icon_button_size_large"
+                    android:layout_marginStart="@dimen/space_sm"
+                    android:contentDescription="@string/cd_filters"
+                    app:backgroundTint="@color/agro_tertiary"
+                    app:icon="@drawable/ic_filter"
+                    app:iconSize="@dimen/icon_md" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Banner informativo -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardBanner"
+            style="@style/Widget.Agro.Card.Success"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/screen_padding"
+            android:layout_marginTop="@dimen/space_base"
+            android:layout_marginEnd="@dimen/screen_padding">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/space_base">
+
+                <ImageView
+                    android:layout_width="@dimen/icon_box_large"
+                    android:layout_height="@dimen/icon_box_large"
+                    android:background="@drawable/bg_circle"
+                    android:backgroundTint="@color/agro_surface"
+                    android:importantForAccessibility="no"
+                    android:padding="@dimen/space_base"
+                    android:src="@drawable/ic_shield"
+                    app:tint="@color/agro_primary" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_md"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/home_banner_title"
+                        android:textAppearance="@style/TextAppearance.Agro.SubtitleStrong"
+                        android:textColor="@color/agro_primary_dark" />
+
+                    <TextView
+                        style="@style/Widget.Agro.Text.Caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/home_banner_body" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Categorías -->
+        <TextView
+            style="@style/Widget.Agro.Text.SectionTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/screen_padding"
+            android:layout_marginTop="@dimen/space_lg"
+            android:text="@string/home_categories" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_sm"
+            android:clipToPadding="false"
+            android:paddingStart="@dimen/screen_padding"
+            android:paddingEnd="@dimen/screen_padding"
+            android:scrollbars="none">
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipsCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:singleLine="true">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipSemen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="false"
+                    android:text="@string/category_semen" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipEmbryo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="false"
+                    android:text="@string/category_embryo" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipLive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="false"
+                    android:text="@string/category_live" />
+            </com.google.android.material.chip.ChipGroup>
+        </HorizontalScrollView>
+
+        <!-- Genética premium -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_lg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/screen_padding"
+            android:paddingEnd="@dimen/space_sm">
+
+            <TextView
+                style="@style/Widget.Agro.Text.SectionTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/home_premium" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSeeAll"
+                style="@style/Widget.Agro.Button.Text.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/action_see_all" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPremium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:nestedScrollingEnabled="false"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/space_md"
+            android:paddingEnd="@dimen/space_md"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_product_grid" />
+
+        <!-- Ejemplares en exhibición -->
+        <TextView
+            style="@style/Widget.Agro.Text.SectionTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/screen_padding"
+            android:layout_marginTop="@dimen/space_lg"
+            android:text="@string/home_live" />
+
+        <TextView
+            style="@style/Widget.Agro.Text.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/screen_padding"
+            android:layout_marginBottom="@dimen/space_sm"
+            android:text="@string/home_live_hint" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvLive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:nestedScrollingEnabled="false"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/space_md"
+            android:paddingEnd="@dimen/space_md"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_product_grid" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

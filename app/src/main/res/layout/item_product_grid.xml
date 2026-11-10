@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Tarjeta de producto del catálogo (cuadrícula y carruseles). -->
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardProduct"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/space_xs"
+    android:clickable="true"
+    android:focusable="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/space_md">
+
+        <FrameLayout
+            android:id="@+id/imageBox"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/product_image_height"
+            android:background="@color/agro_image_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/ivProduct"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/cd_product_image"
+                android:padding="@dimen/product_image_padding"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_bull"
+                app:tint="@color/agro_bull_brown" />
+
+            <TextView
+                android:id="@+id/tvBadge"
+                style="@style/Widget.Agro.Badge.Solid"
+                android:layout_gravity="top|start"
+                android:layout_margin="@dimen/space_sm"
+                android:visibility="gone"
+                tools:text="@string/badge_live"
+                tools:visibility="visible" />
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/ivStar"
+            android:layout_width="@dimen/icon_xs"
+            android:layout_height="@dimen/icon_xs"
+            android:layout_marginStart="@dimen/space_md"
+            android:layout_marginTop="@dimen/space_md"
+            android:importantForAccessibility="no"
+            android:src="@drawable/ic_star"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageBox" />
+
+        <TextView
+            android:id="@+id/tvRating"
+            style="@style/Widget.Agro.Text.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_xs"
+            app:layout_constraintBottom_toBottomOf="@id/ivStar"
+            app:layout_constraintStart_toEndOf="@id/ivStar"
+            app:layout_constraintTop_toTopOf="@id/ivStar"
+            tools:text="4.8" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_md"
+            android:layout_marginTop="@dimen/space_xs"
+            android:layout_marginEnd="@dimen/space_md"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textAppearance="@style/TextAppearance.Agro.SubtitleStrong"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivStar"
+            tools:text="Brahman Elite" />
+
+        <TextView
+            android:id="@+id/tvMeta"
+            style="@style/Widget.Agro.Text.Caption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            app:layout_constraintEnd_toEndOf="@id/tvName"
+            app:layout_constraintStart_toStartOf="@id/tvName"
+            app:layout_constraintTop_toBottomOf="@id/tvName"
+            tools:text="Brahman • ABV +180" />
+
+        <TextView
+            android:id="@+id/tvPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/space_sm"
+            android:maxLines="1"
+            android:textAppearance="@style/TextAppearance.Agro.Price"
+            app:layout_constraintBottom_toBottomOf="@id/btnAddCart"
+            app:layout_constraintEnd_toStartOf="@id/btnAddCart"
+            app:layout_constraintStart_toStartOf="@id/tvName"
+            app:layout_constraintTop_toTopOf="@id/btnAddCart"
+            tools:text="$450.000" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAddCart"
+            style="@style/Widget.Agro.Button.IconOnly"
+            android:layout_width="@dimen/icon_button_size"
+            android:layout_height="@dimen/icon_button_size"
+            android:layout_marginTop="@dimen/space_sm"
+            android:layout_marginEnd="@dimen/space_md"
+            android:contentDescription="@string/cd_add_to_cart"
+            app:icon="@drawable/ic_cart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvMeta" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

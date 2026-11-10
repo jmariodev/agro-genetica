@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Ejemplar vivo en exhibición: no pasa por el carrito, se negocia con el vendedor (RF-28). -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/agro_surface"
+    tools:context=".ui.buyer.detail.LiveDetailFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/detail_image_height"
+                android:background="@color/agro_image_bg">
+
+                <ImageView
+                    android:id="@+id/ivProduct"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/cd_product_image"
+                    android:padding="@dimen/detail_image_padding"
+                    android:src="@drawable/img_bull"
+                    app:tint="@color/agro_bull_brown" />
+
+                <TextView
+                    style="@style/Widget.Agro.Badge.Solid"
+                    android:layout_gravity="top|center_horizontal"
+                    android:layout_marginTop="@dimen/space_base"
+                    android:text="@string/badge_live" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnFavorite"
+                    style="@style/Widget.Agro.Button.IconOnly.Circle"
+                    android:layout_width="@dimen/icon_button_size"
+                    android:layout_height="@dimen/icon_button_size"
+                    android:layout_gravity="top|end"
+                    android:layout_margin="@dimen/space_base"
+                    android:contentDescription="@string/cd_favorite"
+                    app:icon="@drawable/ic_heart" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/screen_padding">
+
+                <TextView
+                    style="@style/Widget.Agro.Badge.Warning"
+                    android:text="@string/badge_on_display" />
+
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_sm"
+                    android:textAppearance="@style/TextAppearance.Agro.Headline"
+                    tools:text="Toro Brahman Rex V" />
+
+                <TextView
+                    android:id="@+id/tvSubtitle"
+                    style="@style/Widget.Agro.Text.Secondary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Ejemplar reproductor de élite" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_base"
+                    android:background="@drawable/bg_warning_box"
+                    android:drawablePadding="@dimen/space_sm"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/space_base"
+                    android:text="@string/live_price_negotiable"
+                    android:textAppearance="@style/TextAppearance.Agro.Subtitle"
+                    android:textColor="@color/agro_warning_dark"
+                    app:drawableStartCompat="@drawable/ic_dollar"
+                    app:drawableTint="@color/agro_warning_dark" />
+
+                <include
+                    android:id="@+id/sellerCard"
+                    layout="@layout/view_seller_card" />
+
+                <TextView
+                    style="@style/Widget.Agro.Text.SectionTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_lg"
+                    android:text="@string/detail_datasheet" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_md"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
+                    <include
+                        android:id="@+id/specAge"
+                        layout="@layout/view_spec_cell" />
+
+                    <Space
+                        android:layout_width="@dimen/space_md"
+                        android:layout_height="wrap_content" />
+
+                    <include
+                        android:id="@+id/specWeight"
+                        layout="@layout/view_spec_cell" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_md"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
+                    <include
+                        android:id="@+id/specRegistry"
+                        layout="@layout/view_spec_cell" />
+
+                    <Space
+                        android:layout_width="@dimen/space_md"
+                        android:layout_height="wrap_content" />
+
+                    <include
+                        android:id="@+id/specAbv"
+                        layout="@layout/view_spec_cell" />
+                </LinearLayout>
+
+                <TextView
+                    style="@style/Widget.Agro.Text.SectionTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_lg"
+                    android:text="@string/detail_documents" />
+
+                <include
+                    android:id="@+id/docVaccination"
+                    layout="@layout/view_document_row" />
+
+                <include
+                    android:id="@+id/docBrand"
+                    layout="@layout/view_document_row" />
+
+                <TextView
+                    android:id="@+id/tvDescription"
+                    style="@style/Widget.Agro.Text.Secondary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_base"
+                    tools:text="Campeón regional con registro genealógico completo." />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_bottom_bar"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/screen_padding"
+        android:paddingTop="@dimen/space_md"
+        android:paddingEnd="@dimen/screen_padding"
+        android:paddingBottom="@dimen/space_sm"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnContact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/live_contact"
+            app:icon="@drawable/ic_chat" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCall"
+                style="@style/Widget.Agro.Button.Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/live_call"
+                app:icon="@drawable/ic_phone" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnWhatsapp"
+                style="@style/Widget.Agro.Button.Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_base"
+                android:text="@string/live_whatsapp"
+                app:icon="@drawable/ic_chat" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

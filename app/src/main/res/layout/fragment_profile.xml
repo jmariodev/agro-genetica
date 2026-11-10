@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Perfil compartido por los tres roles; las secciones se muestran según el rol. -->
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.common.profile.ProfileFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/space_lg">
+
+        <!-- Cabecera -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_header_rounded"
+            android:paddingStart="@dimen/screen_padding"
+            android:paddingTop="@dimen/space_base"
+            android:paddingEnd="@dimen/screen_padding"
+            android:paddingBottom="@dimen/space_xl">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivAvatar"
+                android:layout_width="@dimen/avatar_lg"
+                android:layout_height="@dimen/avatar_lg"
+                android:background="@color/agro_white_20"
+                android:contentDescription="@string/cd_avatar"
+                android:padding="@dimen/space_lg"
+                android:src="@drawable/ic_person"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/ShapeAppearance.Agro.Circle"
+                app:tint="@color/agro_white" />
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_base"
+                android:layout_marginEnd="@dimen/space_sm"
+                android:textAppearance="@style/TextAppearance.Agro.Headline"
+                android:textColor="@color/agro_white"
+                app:layout_constraintEnd_toStartOf="@id/btnEdit"
+                app:layout_constraintStart_toEndOf="@id/ivAvatar"
+                app:layout_constraintTop_toTopOf="@id/ivAvatar"
+                tools:text="Carlos Mendoza" />
+
+            <TextView
+                android:id="@+id/tvFarm"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.Agro.Body"
+                android:textColor="@color/agro_white_70"
+                app:layout_constraintEnd_toEndOf="@id/tvName"
+                app:layout_constraintStart_toStartOf="@id/tvName"
+                app:layout_constraintTop_toBottomOf="@id/tvName"
+                tools:text="Hacienda El Progreso" />
+
+            <TextView
+                android:id="@+id/tvRole"
+                style="@style/Widget.Agro.Badge"
+                android:layout_marginTop="@dimen/space_sm"
+                android:drawablePadding="@dimen/space_xs"
+                app:layout_constraintStart_toStartOf="@id/tvName"
+                app:layout_constraintTop_toBottomOf="@id/tvFarm"
+                tools:text="@string/badge_verified_seller" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnEdit"
+                style="@style/Widget.Agro.Button.IconOnly.Translucent"
+                android:layout_width="@dimen/icon_button_size"
+                android:layout_height="@dimen/icon_button_size"
+                android:contentDescription="@string/cd_edit_profile"
+                app:icon="@drawable/ic_edit"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/ivAvatar" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Métricas (vendedor) -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardStats"
+            style="@style/Widget.Agro.Card.Elevated"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/screen_padding"
+            android:layout_marginTop="@dimen/space_base"
+            android:layout_marginEnd="@dimen/screen_padding">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <include
+                    android:id="@+id/statFirst"
+                    layout="@layout/view_stat_mini" />
+
+                <include
+                    android:id="@+id/statSecond"
+                    layout="@layout/view_stat_mini" />
+
+                <include
+                    android:id="@+id/statThird"
+                    layout="@layout/view_stat_mini" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Datos de contacto -->
+        <TextView
+            android:id="@+id/tvContactTitle"
+            style="@style/Widget.Agro.Text.SectionTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/screen_padding"
+            android:layout_marginTop="@dimen/space_lg"
+            tools:text="@string/profile_farm_data" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/screen_padding"
+            android:layout_marginTop="@dimen/space_md"
+            android:layout_marginEnd="@dimen/screen_padding">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/space_base"
+                android:paddingEnd="@dimen/space_base">
+
+                <include
+                    android:id="@+id/rowLocation"
+                    layout="@layout/view_info_row" />
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <include
+                    android:id="@+id/rowPhone"
+                    layout="@layout/view_info_row" />
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <include
+                    android:id="@+id/rowEmail"
+                    layout="@layout/view_info_row" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Credenciales (vendedor) -->
+        <LinearLayout
+            android:id="@+id/sectionCredentials"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/screen_padding"
+            android:paddingEnd="@dimen/screen_padding">
+
+            <TextView
+                style="@style/Widget.Agro.Text.SectionTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_lg"
+                android:text="@string/profile_credentials" />
+
+            <include
+                android:id="@+id/credIca"
+                layout="@layout/view_document_row" />
+
+            <include
+                android:id="@+id/credFedegan"
+                layout="@layout/view_document_row" />
+        </LinearLayout>
+
+        <!-- Opciones -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/screen_padding"
+            android:layout_marginTop="@dimen/space_lg"
+            android:layout_marginEnd="@dimen/screen_padding">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/optionOrders"
+                    layout="@layout/view_option_row" />
+
+                <LinearLayout
+                    android:id="@+id/optionBiometric"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/button_height"
+                    android:orientation="horizontal"
+                    android:paddingStart="@dimen/space_base"
+                    android:paddingEnd="@dimen/space_base">
+
+                    <ImageView
+                        android:layout_width="@dimen/icon_md"
+                        android:layout_height="@dimen/icon_md"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/ic_fingerprint"
+                        app:tint="@color/agro_neutral_text" />
+
+                    <com.google.android.material.materialswitch.MaterialSwitch
+                        android:id="@+id/switchBiometric"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/space_base"
+                        android:layout_weight="1"
+                        android:text="@string/profile_biometric"
+                        android:textAppearance="@style/TextAppearance.Agro.Subtitle" />
+                </LinearLayout>
+
+                <include
+                    android:id="@+id/optionPrivacy"
+                    layout="@layout/view_option_row" />
+
+                <include
+                    android:id="@+id/optionSettings"
+                    layout="@layout/view_option_row" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLogout"
+            style="@style/Widget.Agro.Button.Outlined.Danger"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/screen_padding"
+            android:layout_marginTop="@dimen/space_lg"
+            android:layout_marginEnd="@dimen/screen_padding"
+            android:text="@string/nav_logout"
+            app:icon="@drawable/ic_logout" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

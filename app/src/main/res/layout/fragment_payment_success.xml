@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/agro_surface"
+    android:fillViewport="true"
+    tools:context=".ui.buyer.checkout.PaymentSuccessFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="@dimen/space_lg">
+
+        <FrameLayout
+            android:id="@+id/successCircle"
+            android:layout_width="@dimen/success_circle"
+            android:layout_height="@dimen/success_circle"
+            android:layout_marginTop="@dimen/space_xl"
+            android:background="@drawable/bg_circle"
+            android:backgroundTint="@color/agro_primary_light">
+
+            <ImageView
+                android:layout_width="@dimen/icon_box_large"
+                android:layout_height="@dimen/icon_box_large"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_circle"
+                android:backgroundTint="@color/agro_primary"
+                android:importantForAccessibility="no"
+                android:padding="@dimen/space_md"
+                android:src="@drawable/ic_check"
+                app:tint="@color/agro_white" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_lg"
+            android:text="@string/payment_success_title"
+            android:textAppearance="@style/TextAppearance.Agro.Headline" />
+
+        <TextView
+            android:id="@+id/tvMessage"
+            style="@style/Widget.Agro.Text.Secondary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_sm"
+            android:gravity="center"
+            tools:text="@string/payment_success_body" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_lg">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/space_base">
+
+                <include
+                    android:id="@+id/rowOrder"
+                    layout="@layout/view_price_row" />
+
+                <include
+                    android:id="@+id/rowMethod"
+                    layout="@layout/view_price_row" />
+
+                <include
+                    android:id="@+id/rowTotal"
+                    layout="@layout/view_price_row" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_sm"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/Widget.Agro.Text.Secondary"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/label_status" />
+
+                    <TextView
+                        android:id="@+id/tvStatus"
+                        style="@style/Widget.Agro.Badge"
+                        tools:text="@string/status_paid" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnOrders"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_lg"
+            android:text="@string/payment_success_orders"
+            app:icon="@drawable/ic_orders" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnContinue"
+            style="@style/Widget.Agro.Button.Outlined"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_md"
+            android:text="@string/payment_success_continue" />
+    </LinearLayout>
+</ScrollView>
