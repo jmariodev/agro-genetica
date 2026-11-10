@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Silueta de toro propia (reemplaza los emojis del mockup). Se tiñe desde el layout. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="64dp"
+    android:tint="?attr/colorControlNormal"
+    android:viewportWidth="72"
+    android:viewportHeight="48">
+    <!-- Cuerpo -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M14,17 C17,12.5 30,11.5 41,12.5 C46,13 50,13.5 52,15 L54,22 C54,26 52.5,28.5 50,30 L50.5,41 C50.5,42 49.8,42.6 49,42.6 L47.5,42.6 C46.8,42.6 46.2,42 46.1,41.3 L45,32 L23,32 L21.7,41.3 C21.6,42 21,42.6 20.3,42.6 L18.9,42.6 C18.1,42.6 17.5,42 17.5,41.2 L17.2,30 C14.5,28.6 12.8,25.6 12.8,22 C12.8,20 13.2,18.4 14,17 Z" />
+    <!-- Joroba (cebú) -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M40,13 C41,9 44.5,8 47,9.5 C48.5,10.5 49,12.5 48.5,14 Z" />
+    <!-- Cabeza -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M50,15 L56,12.5 C58,11.8 60.5,12 62,13.5 L64.5,18.5 C65.2,20 64.5,21.8 63,22.4 L60.5,23.4 C59,24 57.2,23.6 56.2,22.3 L52.5,20 Z" />
+    <!-- Cuernos -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M56.5,12.6 C55.5,10 56,7.5 57.8,6 C57.5,8.3 58,10.3 59.3,12 Z" />
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M61.2,13.2 C62.5,11 64.6,9.8 66.8,9.9 C65,11.2 63.8,12.8 63.3,14.8 Z" />
+    <!-- Oreja -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M59.5,15 L54.5,17.5 L58,18.2 Z" />
+    <!-- Cola -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M13.5,18 C10.5,20 9.5,25 10.2,31 L8.8,33.5 L11.6,33.5 L11.6,31 C11.2,26 12,22 14.2,19.8 Z" />
+</vector>

@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Estilos de componentes reutilizables (Widget.Agro.*). -->
+<resources>
+
+    <!-- ===== Botones ===== -->
+    <style name="Widget.Agro.Button" parent="Widget.Material3.Button">
+        <item name="android:minHeight">@dimen/button_height</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="cornerRadius">@dimen/radius_pill</item>
+        <item name="backgroundTint">@color/agro_primary</item>
+        <item name="android:textColor">@color/agro_white</item>
+        <item name="iconTint">@color/agro_white</item>
+        <item name="iconSize">@dimen/icon_sm</item>
+        <item name="iconGravity">textStart</item>
+        <item name="android:textAppearance">@style/TextAppearance.Agro.Button</item>
+        <item name="elevation">@dimen/elevation_none</item>
+    </style>
+
+    <style name="Widget.Agro.Button.Secondary">
+        <item name="backgroundTint">@color/agro_secondary</item>
+    </style>
+
+    <style name="Widget.Agro.Button.Destructive">
+        <item name="backgroundTint">@color/agro_error</item>
+    </style>
+
+    <style name="Widget.Agro.Button.Soft">
+        <item name="backgroundTint">@color/agro_primary_light</item>
+        <item name="android:textColor">@color/agro_primary_dark</item>
+        <item name="iconTint">@color/agro_primary_dark</item>
+    </style>
+
+    <style name="Widget.Agro.Button.SoftDanger">
+        <item name="backgroundTint">@color/agro_error_light</item>
+        <item name="android:textColor">@color/agro_error</item>
+        <item name="iconTint">@color/agro_error</item>
+    </style>
+
+    <style name="Widget.Agro.Button.Small">
+        <item name="android:minHeight">@dimen/button_height_small</item>
+        <item name="android:paddingStart">@dimen/space_base</item>
+        <item name="android:paddingEnd">@dimen/space_base</item>
+    </style>
+
+    <style name="Widget.Agro.Button.Outlined" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:minHeight">@dimen/button_height</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="cornerRadius">@dimen/radius_pill</item>
+        <item name="strokeColor">@color/agro_primary</item>
+        <item name="strokeWidth">@dimen/stroke_thin</item>
+        <item name="android:textColor">@color/agro_primary</item>
+        <item name="iconTint">@color/agro_primary</item>
+        <item name="iconSize">@dimen/icon_sm</item>
+        <item name="iconGravity">textStart</item>
+        <item name="android:textAppearance">@style/TextAppearance.Agro.Button</item>
+    </style>
+
+    <style name="Widget.Agro.Button.Outlined.Neutral">
+        <item name="strokeColor">@color/agro_outline</item>
+        <item name="android:textColor">@color/agro_neutral</item>
+        <item name="iconTint">@color/agro_neutral</item>
+    </style>
+
+    <style name="Widget.Agro.Button.Outlined.Danger">
+        <item name="strokeColor">@color/agro_error</item>
+        <item name="android:textColor">@color/agro_error</item>
+        <item name="iconTint">@color/agro_error</item>
+    </style>
+
+    <style name="Widget.Agro.Button.Text" parent="Widget.Material3.Button.TextButton">
+        <item name="android:textColor">@color/agro_primary</item>
+        <item name="iconTint">@color/agro_primary</item>
+        <item name="iconSize">@dimen/icon_sm</item>
+        <item name="android:textAppearance">@style/TextAppearance.Agro.Button</item>
+        <item name="android:minHeight">@dimen/touch_target_min</item>
+    </style>
+
+    <style name="Widget.Agro.Button.Text.Small">
+        <item name="android:textAppearance">@style/TextAppearance.Agro.LabelMedium</item>
+        <item name="android:paddingStart">@dimen/space_sm</item>
+        <item name="android:paddingEnd">@dimen/space_sm</item>
+    </style>
+
+    <style name="Widget.Agro.Button.Text.Danger">
+        <item name="android:textColor">@color/agro_error</item>
+        <item name="iconTint">@color/agro_error</item>
+    </style>
+
+    <style name="Widget.Agro.Button.Text.Warning">
+        <item name="android:textColor">@color/agro_warning_dark</item>
+        <item name="iconTint">@color/agro_warning_dark</item>
+    </style>
+
+    <style name="Widget.Agro.Button.Text.Neutral">
+        <item name="android:textColor">@color/agro_neutral_text</item>
+        <item name="iconTint">@color/agro_neutral_text</item>
+    </style>
+
+    <!-- Botón solo ícono (cuadrado redondeado) -->
+    <style name="Widget.Agro.Button.IconOnly" parent="Widget.Material3.Button">
+        <item name="android:minWidth">0dp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingRight">0dp</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="iconPadding">0dp</item>
+        <item name="iconGravity">textStart</item>
+        <item name="iconSize">@dimen/icon_sm</item>
+        <item name="cornerRadius">@dimen/radius_md</item>
+        <item name="backgroundTint">@color/agro_primary</item>
+        <item name="iconTint">@color/agro_white</item>
+        <item name="elevation">@dimen/elevation_none</item>
+    </style>
+
+    <style name="Widget.Agro.Button.IconOnly.Soft">
+        <item name="backgroundTint">@color/agro_primary_light</item>
+        <item name="iconTint">@color/agro_primary</item>
+    </style>
+
+    <style name="Widget.Agro.Button.IconOnly.Danger">
+        <item name="backgroundTint">@color/agro_error_light</item>
+        <item name="iconTint">@color/agro_error</item>
+    </style>
+
+    <style name="Widget.Agro.Button.IconOnly.Ghost">
+        <item name="backgroundTint">@android:color/transparent</item>
+        <item name="iconTint">@color/agro_neutral_text</item>
+        <item name="rippleColor">@color/agro_primary_light</item>
+    </style>
+
+    <style name="Widget.Agro.Button.IconOnly.Circle">
+        <item name="cornerRadius">@dimen/radius_pill</item>
+        <item name="backgroundTint">@color/agro_surface</item>
+        <item name="iconTint">@color/agro_neutral</item>
+        <item name="elevation">@dimen/card_elevation</item>
+    </style>
+
+    <style name="Widget.Agro.Button.IconOnly.Translucent">
+        <item name="cornerRadius">@dimen/radius_pill</item>
+        <item name="backgroundTint">@color/agro_white_20</item>
+        <item name="iconTint">@color/agro_white</item>
+    </style>
+
+    <!-- Selector segmentado (tipo de usuario / tipo de producto) -->
+    <style name="Widget.Agro.Button.Toggle" parent="Widget.Material3.Button">
+        <item name="android:minHeight">@dimen/button_height</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="cornerRadius">@dimen/radius_md</item>
+        <item name="backgroundTint">@color/sel_toggle_bg</item>
+        <item name="android:textColor">@color/sel_toggle_text</item>
+        <item name="android:textAppearance">@style/TextAppearance.Agro.Button</item>
+        <item name="android:checkable">true</item>
+        <item name="elevation">@dimen/elevation_none</item>
+    </style>
+
+    <!-- ===== Campos de texto ===== -->
+    <style name="Widget.Agro.TextInputLayout" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="hintEnabled">false</item>
+        <item name="boxBackgroundMode">outline</item>
+        <item name="boxBackgroundColor">@color/agro_input_bg</item>
+        <item name="boxStrokeColor">@color/sel_input_stroke</item>
+        <item name="boxStrokeWidth">@dimen/stroke_thin</item>
+        <item name="boxStrokeWidthFocused">@dimen/stroke_selected</item>
+        <item name="boxStrokeErrorColor">@color/agro_error</item>
+        <item name="boxCornerRadiusTopStart">@dimen/radius_lg</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/radius_lg</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/radius_lg</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/radius_lg</item>
+        <item name="startIconTint">@color/agro_text_secondary</item>
+        <item name="endIconTint">@color/agro_text_secondary</item>
+        <item name="errorTextColor">@color/agro_error</item>
+        <item name="errorIconTint">@color/agro_error</item>
+        <item name="helperTextTextColor">@color/agro_text_secondary</item>
+        <item name="prefixTextColor">@color/agro_text_secondary</item>
+        <item name="android:textColorHint">@color/agro_text_hint</item>
+    </style>
+
+    <style name="Widget.Agro.TextInputLayout.Dropdown" parent="Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <item name="hintEnabled">false</item>
+        <item name="boxBackgroundMode">outline</item>
+        <item name="boxBackgroundColor">@color/agro_input_bg</item>
+        <item name="boxStrokeColor">@color/sel_input_stroke</item>
+        <item name="boxStrokeWidth">@dimen/stroke_thin</item>
+        <item name="boxStrokeWidthFocused">@dimen/stroke_selected</item>
+        <item name="boxCornerRadiusTopStart">@dimen/radius_lg</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/radius_lg</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/radius_lg</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/radius_lg</item>
+        <item name="endIconTint">@color/agro_primary</item>
+        <item name="startIconTint">@color/agro_text_secondary</item>
+        <item name="android:textColorHint">@color/agro_text_hint</item>
+    </style>
+
+    <!-- ===== Tarjetas ===== -->
+    <style name="Widget.Agro.Card" parent="Widget.Material3.CardView.Outlined">
+        <item name="cardCornerRadius">@dimen/radius_lg</item>
+        <item name="cardBackgroundColor">@color/agro_surface</item>
+        <item name="strokeColor">@color/agro_outline</item>
+        <item name="strokeWidth">@dimen/stroke_thin</item>
+        <item name="cardElevation">@dimen/elevation_none</item>
+    </style>
+
+    <style name="Widget.Agro.Card.Elevated" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardCornerRadius">@dimen/radius_lg</item>
+        <item name="cardBackgroundColor">@color/agro_surface</item>
+        <item name="cardElevation">@dimen/card_elevation</item>
+    </style>
+
+    <style name="Widget.Agro.Card.Filled">
+        <item name="cardBackgroundColor">@color/agro_input_bg</item>
+        <item name="strokeWidth">0dp</item>
+        <item name="cardCornerRadius">@dimen/radius_md</item>
+    </style>
+
+    <style name="Widget.Agro.Card.Warning">
+        <item name="cardBackgroundColor">@color/agro_warning_light</item>
+        <item name="strokeColor">@color/agro_warning_stroke</item>
+    </style>
+
+    <style name="Widget.Agro.Card.Success">
+        <item name="cardBackgroundColor">@color/agro_primary_light</item>
+        <item name="strokeColor">@color/agro_success_stroke</item>
+        <item name="cardCornerRadius">@dimen/radius_md</item>
+    </style>
+
+    <style name="Widget.Agro.Card.Hero">
+        <item name="cardBackgroundColor">@color/agro_primary</item>
+        <item name="strokeWidth">0dp</item>
+        <item name="cardCornerRadius">@dimen/radius_xl</item>
+    </style>
+
+    <style name="Widget.Agro.Card.Payment">
+        <item name="strokeColor">@color/sel_payment_stroke</item>
+        <item name="strokeWidth">@dimen/stroke_selected</item>
+        <item name="android:checkable">true</item>
+        <item name="checkedIcon">@null</item>
+        <item name="cardCornerRadius">@dimen/radius_md</item>
+    </style>
+
+    <!-- ===== Chips ===== -->
+    <style name="Widget.Agro.Chip" parent="Widget.Material3.Chip.Filter">
+        <item name="chipBackgroundColor">@color/sel_chip_bg</item>
+        <item name="android:textColor">@color/sel_chip_text</item>
+        <item name="chipStrokeWidth">0dp</item>
+        <item name="chipMinHeight">@dimen/chip_height</item>
+        <item name="checkedIconVisible">false</item>
+        <item name="chipIconVisible">false</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.Agro.Pill</item>
+        <item name="android:textAppearance">@style/TextAppearance.Agro.Chip</item>
+        <item name="chipStartPadding">@dimen/space_sm</item>
+        <item name="chipEndPadding">@dimen/space_sm</item>
+        <item name="ensureMinTouchTargetSize">false</item>
+    </style>
+
+    <!-- ===== Badges de estado (TextView) ===== -->
+    <style name="Widget.Agro.Badge" parent="">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/bg_badge</item>
+        <item name="android:backgroundTint">@color/agro_primary_light</item>
+        <item name="android:textColor">@color/agro_primary_dark</item>
+        <item name="android:textAppearance">@style/TextAppearance.Agro.Badge</item>
+        <item name="android:paddingStart">@dimen/space_md</item>
+        <item name="android:paddingEnd">@dimen/space_md</item>
+        <item name="android:paddingTop">@dimen/space_xs</item>
+        <item name="android:paddingBottom">@dimen/space_xs</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="Widget.Agro.Badge.Info">
+        <item name="android:backgroundTint">@color/agro_secondary_light</item>
+        <item name="android:textColor">@color/agro_secondary_dark</item>
+    </style>
+
+    <style name="Widget.Agro.Badge.Warning">
+        <item name="android:backgroundTint">@color/agro_warning_light</item>
+        <item name="android:textColor">@color/agro_warning_dark</item>
+    </style>
+
+    <style name="Widget.Agro.Badge.Solid">
+        <item name="android:backgroundTint">@color/agro_warning</item>
+        <item name="android:textColor">@color/agro_white</item>
+    </style>
+
+    <!-- ===== Textos de uso frecuente ===== -->
+    <style name="Widget.Agro.Text.SectionTitle" parent="">
+        <item name="android:textAppearance">@style/TextAppearance.Agro.Title</item>
+        <item name="android:textColor">@color/agro_neutral</item>
+    </style>
+
+    <style name="Widget.Agro.Text.FieldLabel" parent="">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/space_base</item>
+        <item name="android:layout_marginBottom">@dimen/space_sm</item>
+        <item name="android:textAppearance">@style/TextAppearance.Agro.Label</item>
+        <item name="android:textColor">@color/agro_text_secondary</item>
+    </style>
+
+    <style name="Widget.Agro.Text.Secondary" parent="">
+        <item name="android:textAppearance">@style/TextAppearance.Agro.Body</item>
+        <item name="android:textColor">@color/agro_text_secondary</item>
+    </style>
+
+    <style name="Widget.Agro.Text.Caption" parent="">
+        <item name="android:textAppearance">@style/TextAppearance.Agro.Caption</item>
+        <item name="android:textColor">@color/agro_text_secondary</item>
+    </style>
+
+    <style name="Widget.Agro.Divider" parent="Widget.Material3.MaterialDivider">
+        <item name="dividerColor">@color/agro_divider</item>
+        <item name="dividerThickness">@dimen/divider_height</item>
+    </style>
+
+    <!-- ===== Navegación ===== -->
+    <style name="Widget.Agro.Toolbar" parent="Widget.Material3.Toolbar">
+        <item name="android:background">@color/agro_primary_dark</item>
+        <item name="titleTextAppearance">@style/TextAppearance.Agro.ToolbarTitle</item>
+        <item name="titleTextColor">@color/agro_white</item>
+        <item name="navigationIconTint">@color/agro_white</item>
+        <item name="materialThemeOverlay">@style/ThemeOverlay.Agro.Toolbar</item>
+    </style>
+
+    <style name="ThemeOverlay.Agro.Toolbar" parent="ThemeOverlay.Material3.Dark.ActionBar">
+        <item name="colorControlNormal">@color/agro_white</item>
+        <item name="colorOnSurface">@color/agro_white</item>
+        <item name="colorOnSurfaceVariant">@color/agro_white</item>
+    </style>
+
+    <style name="Widget.Agro.BottomNav" parent="Widget.Material3.BottomNavigationView">
+        <item name="backgroundTint">@color/agro_surface</item>
+        <item name="elevation">@dimen/bottom_bar_elevation</item>
+        <item name="itemIconTint">@color/sel_bottom_nav</item>
+        <item name="itemTextColor">@color/sel_bottom_nav</item>
+        <item name="itemActiveIndicatorStyle">@style/Widget.Agro.BottomNav.ActiveIndicator</item>
+        <item name="itemTextAppearanceActive">@style/TextAppearance.Agro.LabelMedium</item>
+        <item name="itemTextAppearanceInactive">@style/TextAppearance.Agro.LabelMedium</item>
+        <item name="labelVisibilityMode">labeled</item>
+    </style>
+
+    <style name="Widget.Agro.BottomNav.ActiveIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/agro_primary_light</item>
+    </style>
+
+    <style name="Widget.Agro.NavigationView" parent="Widget.Material3.NavigationView">
+        <item name="android:background">@color/agro_surface</item>
+        <item name="itemIconTint">@color/sel_drawer_item</item>
+        <item name="itemTextColor">@color/sel_drawer_item</item>
+        <item name="itemShapeFillColor">@color/sel_drawer_item_bg</item>
+        <item name="itemTextAppearance">@style/TextAppearance.Agro.Subtitle</item>
+    </style>
+
+    <style name="Widget.Agro.FAB" parent="Widget.Material3.FloatingActionButton.Primary">
+        <item name="backgroundTint">@color/agro_primary</item>
+        <item name="tint">@color/agro_white</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.Agro.Circle</item>
+    </style>
+
+    <style name="Widget.Agro.ExtendedFAB" parent="Widget.Material3.ExtendedFloatingActionButton.Icon.Primary">
+        <item name="backgroundTint">@color/agro_primary</item>
+        <item name="iconTint">@color/agro_white</item>
+        <item name="android:textColor">@color/agro_white</item>
+        <item name="android:textAppearance">@style/TextAppearance.Agro.Button</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.Agro.Pill</item>
+    </style>
+
+    <!-- ===== Otros controles ===== -->
+    <style name="Widget.Agro.CheckBox" parent="Widget.Material3.CompoundButton.CheckBox">
+        <item name="buttonTint">@color/agro_primary</item>
+        <item name="android:textAppearance">@style/TextAppearance.Agro.Caption</item>
+        <item name="android:textColor">@color/agro_text_secondary</item>
+    </style>
+
+    <style name="Widget.Agro.Radio" parent="Widget.Material3.CompoundButton.RadioButton">
+        <item name="buttonTint">@color/sel_radio</item>
+    </style>
+
+    <style name="Widget.Agro.Switch" parent="Widget.Material3.CompoundButton.MaterialSwitch">
+        <item name="thumbTint">@color/agro_white</item>
+    </style>
+
+    <style name="Widget.Agro.Progress" parent="Widget.Material3.LinearProgressIndicator">
+        <item name="indicatorColor">@color/agro_primary</item>
+        <item name="trackColor">@color/agro_primary_light</item>
+        <item name="trackThickness">@dimen/progress_thickness</item>
+        <item name="trackCornerRadius">@dimen/radius_sm</item>
+    </style>
+
+    <style name="Widget.Agro.RangeSlider" parent="Widget.Material3.Slider">
+        <item name="thumbColor">@color/agro_primary</item>
+        <item name="trackColorActive">@color/agro_primary</item>
+        <item name="trackColorInactive">@color/agro_primary_light</item>
+        <item name="haloColor">@color/agro_primary_light</item>
+        <item name="labelBehavior">gone</item>
+    </style>
+
+    <!-- ===== Diálogos y hojas inferiores ===== -->
+    <style name="ThemeOverlay.Agro.Dialog" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="colorSurfaceContainerHigh">@color/agro_surface</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.Agro.Large</item>
+        <item name="buttonBarPositiveButtonStyle">@style/Widget.Agro.Button.Dialog</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Widget.Agro.Button.Dialog.Neutral</item>
+        <item name="buttonBarNeutralButtonStyle">@style/Widget.Agro.Button.Dialog.Neutral</item>
+    </style>
+
+    <style name="Widget.Agro.Button.Dialog" parent="Widget.Material3.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/agro_primary</item>
+        <item name="android:textAppearance">@style/TextAppearance.Agro.Button</item>
+    </style>
+
+    <style name="Widget.Agro.Button.Dialog.Neutral">
+        <item name="android:textColor">@color/agro_neutral_text</item>
+    </style>
+
+    <style name="ThemeOverlay.Agro.BottomSheet" parent="ThemeOverlay.Material3.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/Widget.Agro.BottomSheet</item>
+    </style>
+
+    <style name="Widget.Agro.BottomSheet" parent="Widget.Material3.BottomSheet.Modal">
+        <item name="backgroundTint">@color/agro_surface</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.Agro.Sheet</item>
+    </style>
+</resources>

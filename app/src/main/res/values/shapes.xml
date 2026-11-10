@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Formas propias (no las esquinas por defecto de Material). -->
+<resources>
+    <style name="ShapeAppearance.Agro.Small" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/radius_sm</item>
+    </style>
+    <style name="ShapeAppearance.Agro.Medium" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/radius_lg</item>
+    </style>
+    <style name="ShapeAppearance.Agro.Large" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/radius_xl</item>
+    </style>
+    <style name="ShapeAppearance.Agro.Pill" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+    <style name="ShapeAppearance.Agro.Circle" parent="ShapeAppearance.Agro.Pill" />
+    <style name="ShapeAppearance.Agro.Sheet" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">@dimen/radius_sheet</item>
+        <item name="cornerSizeTopRight">@dimen/radius_sheet</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+    </style>
+</resources>

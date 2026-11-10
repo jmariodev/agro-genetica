@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Android 12+: el splash del sistema usa la misma marca que nuestro SplashActivity. -->
+<resources>
+    <style name="Theme.Agrodigital.Splash" parent="Base.Theme.Agrodigital.Splash">
+        <item name="android:windowSplashScreenBackground">@color/agro_primary_dark</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
+    </style>
+</resources>

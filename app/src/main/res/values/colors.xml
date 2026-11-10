@@ -1,5 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Paleta AgroGenética Digital (Guía de estilos). Nombres semánticos: los layouts nunca usan hex. -->
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <!-- Principales -->
+    <color name="agro_primary">#2E7D32</color>
+    <color name="agro_primary_dark">#1B5E20</color>
+    <color name="agro_primary_light">#E8F5E9</color>
+    <color name="agro_secondary">#1976D2</color>
+    <color name="agro_secondary_dark">#1565C0</color>
+    <color name="agro_secondary_light">#E3F2FD</color>
+    <color name="agro_tertiary">#43A047</color>
+    <color name="agro_neutral">#212121</color>
+
+    <!-- Estados -->
+    <color name="agro_error">#D32F2F</color>
+    <color name="agro_error_dark">#C62828</color>
+    <color name="agro_error_light">#FFEBEE</color>
+    <color name="agro_warning">#FF9800</color>
+    <color name="agro_warning_dark">#E65100</color>
+    <color name="agro_warning_light">#FFF8E1</color>
+    <color name="agro_warning_stroke">#FFE082</color>
+    <color name="agro_success_stroke">#C8E6C9</color>
+    <color name="agro_star">#FFB300</color>
+
+    <!-- Superficies y texto -->
+    <color name="agro_background">#F5F5F5</color>
+    <color name="agro_surface">#FFFFFF</color>
+    <color name="agro_input_bg">#F1F3EF</color>
+    <color name="agro_image_bg">#EEF1EC</color>
+    <color name="agro_outline">#E0E0E0</color>
+    <color name="agro_divider">#EEEEEE</color>
+    <color name="agro_text_secondary">#6B6F69</color>
+    <color name="agro_text_hint">#9E9E9E</color>
+    <color name="agro_neutral_light">#EEEEEE</color>
+    <color name="agro_neutral_text">#616161</color>
+    <color name="agro_white">#FFFFFF</color>
+    <color name="agro_white_70">#B3FFFFFF</color>
+    <color name="agro_white_20">#33FFFFFF</color>
+    <color name="agro_white_10">#1AFFFFFF</color>
+    <color name="agro_scrim">#66000000</color>
+
+    <!-- Ilustraciones de ganado -->
+    <color name="agro_bull_brown">#8D5A3B</color>
+    <color name="agro_bull_dark">#3E2C23</color>
+    <color name="agro_bull_light">#B0896B</color>
+
+    <!-- Logos de pasarelas (identificación visual) -->
+    <color name="agro_pay_mercadopago">#009EE3</color>
+    <color name="agro_pay_pse">#00A859</color>
+    <color name="agro_pay_epayco">#F26B21</color>
+
+    <!-- Fondo del ícono del launcher -->
+    <color name="ic_launcher_background">#1B5E20</color>
 </resources>

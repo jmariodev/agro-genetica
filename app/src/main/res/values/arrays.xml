@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Razas disponibles al publicar un producto -->
+    <string-array name="breeds">
+        <item>Brahman</item>
+        <item>Angus</item>
+        <item>Simmental</item>
+        <item>Holstein</item>
+        <item>Gyr</item>
+        <item>Normando</item>
+        <item>Romosinuano</item>
+        <item>Blanco Orejinegro</item>
+    </string-array>
+
+    <!-- Roles asignables por el administrador -->
+    <string-array name="user_roles">
+        <item>@string/role_buyer</item>
+        <item>@string/role_seller</item>
+        <item>@string/role_admin</item>
+    </string-array>
+
+    <!-- Rango inicial del filtro de precio (COP) -->
+    <array name="price_range_default">
+        <item>0</item>
+        <item>1000000</item>
+    </array>
+</resources>

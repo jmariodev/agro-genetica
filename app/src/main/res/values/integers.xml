@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="grid_span_count">2</integer>
+    <integer name="splash_delay_ms">1800</integer>
+    <integer name="anim_duration_medium">600</integer>
+</resources>

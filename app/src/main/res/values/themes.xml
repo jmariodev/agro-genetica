@@ -1,9 +1,92 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.Agrodigital" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Tema base: Material 3 claro con paleta, tipografía y formas propias. -->
+    <style name="Base.Theme.Agrodigital" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Colores -->
+        <item name="colorPrimary">@color/agro_primary</item>
+        <item name="colorOnPrimary">@color/agro_white</item>
+        <item name="colorPrimaryContainer">@color/agro_primary_light</item>
+        <item name="colorOnPrimaryContainer">@color/agro_primary_dark</item>
+        <item name="colorPrimaryDark">@color/agro_primary_dark</item>
+        <item name="colorSecondary">@color/agro_secondary</item>
+        <item name="colorOnSecondary">@color/agro_white</item>
+        <item name="colorSecondaryContainer">@color/agro_secondary_light</item>
+        <item name="colorOnSecondaryContainer">@color/agro_secondary_dark</item>
+        <item name="colorTertiary">@color/agro_tertiary</item>
+        <item name="colorOnTertiary">@color/agro_white</item>
+        <item name="colorError">@color/agro_error</item>
+        <item name="colorOnError">@color/agro_white</item>
+        <item name="colorSurface">@color/agro_surface</item>
+        <item name="colorOnSurface">@color/agro_neutral</item>
+        <item name="colorOnSurfaceVariant">@color/agro_text_secondary</item>
+        <item name="colorSurfaceContainerLowest">@color/agro_surface</item>
+        <item name="colorSurfaceContainerLow">@color/agro_surface</item>
+        <item name="colorSurfaceContainer">@color/agro_surface</item>
+        <item name="colorSurfaceContainerHigh">@color/agro_surface</item>
+        <item name="colorSurfaceContainerHighest">@color/agro_input_bg</item>
+        <item name="colorOutline">@color/agro_outline</item>
+        <item name="colorOutlineVariant">@color/agro_divider</item>
+        <item name="colorControlActivated">@color/agro_primary</item>
+        <item name="colorControlHighlight">@color/agro_primary_light</item>
+        <item name="android:colorBackground">@color/agro_background</item>
+        <item name="android:windowBackground">@color/agro_background</item>
+        <item name="android:textColorPrimary">@color/agro_neutral</item>
+        <item name="android:textColorSecondary">@color/agro_text_secondary</item>
+        <item name="android:textColorHint">@color/agro_text_hint</item>
+
+        <!-- Tipografía Inter -->
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="fontFamily">@font/inter</item>
+        <item name="textAppearanceHeadlineSmall">@style/TextAppearance.Agro.Headline</item>
+        <item name="textAppearanceTitleLarge">@style/TextAppearance.Agro.Title</item>
+        <item name="textAppearanceTitleMedium">@style/TextAppearance.Agro.Subtitle</item>
+        <item name="textAppearanceTitleSmall">@style/TextAppearance.Agro.SubtitleStrong</item>
+        <item name="textAppearanceBodyLarge">@style/TextAppearance.Agro.Input</item>
+        <item name="textAppearanceBodyMedium">@style/TextAppearance.Agro.Body</item>
+        <item name="textAppearanceBodySmall">@style/TextAppearance.Agro.Caption</item>
+        <item name="textAppearanceLabelLarge">@style/TextAppearance.Agro.Button</item>
+        <item name="textAppearanceLabelMedium">@style/TextAppearance.Agro.LabelMedium</item>
+        <item name="textAppearanceLabelSmall">@style/TextAppearance.Agro.Badge</item>
+
+        <!-- Formas -->
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.Agro.Small</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.Agro.Medium</item>
+        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.Agro.Large</item>
+        <item name="shapeAppearanceCornerSmall">@style/ShapeAppearance.Agro.Small</item>
+        <item name="shapeAppearanceCornerMedium">@style/ShapeAppearance.Agro.Medium</item>
+        <item name="shapeAppearanceCornerLarge">@style/ShapeAppearance.Agro.Large</item>
+
+        <!-- Estilos por defecto de componentes -->
+        <item name="materialButtonStyle">@style/Widget.Agro.Button</item>
+        <item name="materialButtonOutlinedStyle">@style/Widget.Agro.Button.Outlined</item>
+        <item name="textInputStyle">@style/Widget.Agro.TextInputLayout</item>
+        <item name="materialCardViewStyle">@style/Widget.Agro.Card</item>
+        <item name="chipStyle">@style/Widget.Agro.Chip</item>
+        <item name="bottomNavigationStyle">@style/Widget.Agro.BottomNav</item>
+        <item name="navigationViewStyle">@style/Widget.Agro.NavigationView</item>
+        <item name="toolbarStyle">@style/Widget.Agro.Toolbar</item>
+        <item name="floatingActionButtonStyle">@style/Widget.Agro.FAB</item>
+        <item name="extendedFloatingActionButtonStyle">@style/Widget.Agro.ExtendedFAB</item>
+        <item name="checkboxStyle">@style/Widget.Agro.CheckBox</item>
+        <item name="radioButtonStyle">@style/Widget.Agro.Radio</item>
+        <item name="materialSwitchStyle">@style/Widget.Agro.Switch</item>
+        <item name="linearProgressIndicatorStyle">@style/Widget.Agro.Progress</item>
+        <item name="sliderStyle">@style/Widget.Agro.RangeSlider</item>
+        <item name="materialDividerStyle">@style/Widget.Agro.Divider</item>
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.Agro.Dialog</item>
+        <item name="bottomSheetDialogTheme">@style/ThemeOverlay.Agro.BottomSheet</item>
+
+        <!-- Barras del sistema: el contenido se dibuja de borde a borde -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
     </style>
 
     <style name="Theme.Agrodigital" parent="Base.Theme.Agrodigital" />
+
+    <!-- Splash: fondo verde mientras carga la primera Activity -->
+    <style name="Base.Theme.Agrodigital.Splash" parent="Theme.Agrodigital">
+        <item name="android:windowBackground">@drawable/bg_splash</item>
+    </style>
+
+    <style name="Theme.Agrodigital.Splash" parent="Base.Theme.Agrodigital.Splash" />
 </resources>
