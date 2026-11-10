@@ -177,12 +177,6 @@
                 app:drawableStartCompat="@drawable/ic_shield"
                 app:drawableTint="@color/agro_primary" />
 
-            <com.google.android.material.checkbox.MaterialCheckBox
-                android:id="@+id/cbTerms"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/space_sm"
-                android:text="@string/checkout_terms" />
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 
@@ -196,6 +190,13 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/cbTerms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_sm"
+            android:text="@string/checkout_terms" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnPay"

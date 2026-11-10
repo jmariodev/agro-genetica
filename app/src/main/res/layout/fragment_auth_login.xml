@@ -196,6 +196,9 @@
                         <com.google.android.material.button.MaterialButton
                             android:id="@+id/btnDemoBuyer"
                             style="@style/Widget.Agro.Button.Small"
+                            android:maxLines="1"
+                            android:paddingStart="@dimen/space_xs"
+                            android:paddingEnd="@dimen/space_xs"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -204,6 +207,9 @@
                         <com.google.android.material.button.MaterialButton
                             android:id="@+id/btnDemoSeller"
                             style="@style/Widget.Agro.Button.Small"
+                            android:maxLines="1"
+                            android:paddingStart="@dimen/space_xs"
+                            android:paddingEnd="@dimen/space_xs"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/space_sm"
@@ -213,6 +219,9 @@
                         <com.google.android.material.button.MaterialButton
                             android:id="@+id/btnDemoAdmin"
                             style="@style/Widget.Agro.Button.Small"
+                            android:maxLines="1"
+                            android:paddingStart="@dimen/space_xs"
+                            android:paddingEnd="@dimen/space_xs"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/space_sm"

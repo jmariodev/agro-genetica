@@ -33,8 +33,8 @@
                     android:layout_height="@dimen/biometric_inner"
                     android:background="@color/agro_primary_light"
                     android:contentDescription="@string/cd_avatar"
-                    android:padding="@dimen/space_xl"
                     android:scaleType="centerCrop"
+                    app:contentPadding="@dimen/space_xl"
                     android:src="@drawable/ic_person"
                     app:shapeAppearanceOverlay="@style/ShapeAppearance.Agro.Circle"
                     app:tint="@color/agro_primary" />

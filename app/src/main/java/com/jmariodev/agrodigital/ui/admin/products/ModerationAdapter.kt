@@ -23,7 +23,7 @@ interface ModerationActions {
     fun onRemove(product: Product)
 }
 
-class ModerationAdapter(private val actions: ModerationActions) :
+class ModerationAdapter(private val listener: ModerationActions) :
     ListAdapter<Product, ModerationAdapter.Holder>(Diff) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
@@ -47,11 +47,11 @@ class ModerationAdapter(private val actions: ModerationActions) :
             btnApprove.visibleIf(product.status == ProductStatus.PENDIENTE)
             btnFlag.visibleIf(!reported)
 
-            btnDetails.setOnClickListener { actions.onDetails(product) }
-            btnApprove.setOnClickListener { actions.onApprove(product) }
-            btnFlag.setOnClickListener { actions.onFlag(product) }
-            btnForceApprove.setOnClickListener { actions.onApprove(product) }
-            btnRemove.setOnClickListener { actions.onRemove(product) }
+            btnDetails.setOnClickListener { listener.onDetails(product) }
+            btnApprove.setOnClickListener { listener.onApprove(product) }
+            btnFlag.setOnClickListener { listener.onFlag(product) }
+            btnForceApprove.setOnClickListener { listener.onApprove(product) }
+            btnRemove.setOnClickListener { listener.onRemove(product) }
         }
     }
 

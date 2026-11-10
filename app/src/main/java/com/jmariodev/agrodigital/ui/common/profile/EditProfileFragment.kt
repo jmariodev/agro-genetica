@@ -27,7 +27,7 @@ class EditProfileFragment : BindingFragment<FragmentEditProfileBinding>(Fragment
     private val takePicture = registerForActivityResult(ActivityResultContracts.TakePicturePreview()) { bitmap ->
         if (bitmap != null) {
             binding.ivAvatar.imageTintList = null
-            binding.ivAvatar.setPadding(0, 0, 0, 0)
+            binding.ivAvatar.setContentPadding(0, 0, 0, 0)
             binding.ivAvatar.setImageBitmap(bitmap)
         }
     }
@@ -35,7 +35,7 @@ class EditProfileFragment : BindingFragment<FragmentEditProfileBinding>(Fragment
     private val pickImage = registerForActivityResult(ActivityResultContracts.GetContent()) { uri ->
         if (uri != null) {
             binding.ivAvatar.imageTintList = null
-            binding.ivAvatar.setPadding(0, 0, 0, 0)
+            binding.ivAvatar.setContentPadding(0, 0, 0, 0)
             binding.ivAvatar.setImageURI(uri)
         }
     }

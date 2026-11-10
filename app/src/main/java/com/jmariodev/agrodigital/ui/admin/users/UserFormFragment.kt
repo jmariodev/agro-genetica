@@ -42,7 +42,7 @@ class UserFormFragment : BindingFragment<FragmentUserFormBinding>(FragmentUserFo
             binding.actRole.setText(getString(user.role.label()), false)
             binding.switchActive.isChecked = user.status != UserStatus.INACTIVO
             binding.groupPassword.visibleIf(false)
-            binding.btnSave.setText(R.string.action_save_changes)
+            binding.btnSave.setText(R.string.action_save)
             binding.btnDelete.visibleIf(user.id != ServiceLocator.session.userId)
         }
 

@@ -447,7 +447,7 @@
     <string name="moderation_approved">%1$s aprobado</string>
     <string name="moderation_rejected">%1$s rechazado</string>
     <string name="moderation_flagged">%1$s marcado para revisión</string>
-    <string name="moderation_force_approve">Aprobar de todas formas</string>
+    <string name="moderation_force_approve">Aprobar igual</string>
     <string name="moderation_remove">Eliminar producto</string>
     <string name="moderation_remove_message">¿Eliminar «%1$s» por incumplir las normas? Se notificará al vendedor.</string>
     <string name="moderation_reject_title">Rechazar publicación</string>

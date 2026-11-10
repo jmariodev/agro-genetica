@@ -124,7 +124,7 @@
                     android:layout_marginStart="@dimen/space_sm"
                     android:layout_weight="1"
                     android:minHeight="@dimen/button_height_small"
-                    android:text="@string/moderation_remove" />
+                    android:text="@string/action_delete" />
             </LinearLayout>
         </LinearLayout>
 

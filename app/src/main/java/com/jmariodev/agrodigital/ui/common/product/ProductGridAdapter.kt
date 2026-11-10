@@ -1,6 +1,7 @@
 package com.jmariodev.agrodigital.ui.common.product
 
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
@@ -45,7 +46,7 @@ class ProductGridAdapter(
             tvBadge.visibleIf(live || product.premium)
             tvBadge.setText(if (live) R.string.badge_live else R.string.badge_premium)
             tvPrice.text = if (live) context.getString(R.string.price_negotiable) else product.price.toCop()
-            btnAddCart.visibleIf(!live)
+            btnAddCart.visibility = if (live) View.INVISIBLE else View.VISIBLE
 
             root.setOnClickListener { onClick(product) }
             btnAddCart.setOnClickListener { onAddToCart(product) }
