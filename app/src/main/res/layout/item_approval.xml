@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Solicitud pendiente (usuario o producto) con aprobación rápida. -->
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/space_sm">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/space_md">
+
+        <ImageView
+            android:id="@+id/ivIcon"
+            android:layout_width="@dimen/icon_box"
+            android:layout_height="@dimen/icon_box"
+            android:background="@drawable/bg_rounded"
+            android:backgroundTint="@color/agro_secondary_light"
+            android:importantForAccessibility="no"
+            android:padding="@dimen/space_sm"
+            app:tint="@color/agro_secondary"
+            tools:src="@drawable/ic_users" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_md"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.Agro.SubtitleStrong"
+                tools:text="Finca La Aurora" />
+
+            <TextView
+                android:id="@+id/tvSubtitle"
+                style="@style/Widget.Agro.Text.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Vendedor • Hace 2 h" />
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnApprove"
+            style="@style/Widget.Agro.Button.IconOnly.Soft"
+            android:layout_width="@dimen/icon_button_size"
+            android:layout_height="@dimen/icon_button_size"
+            android:contentDescription="@string/action_approve"
+            app:icon="@drawable/ic_check" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnReject"
+            style="@style/Widget.Agro.Button.IconOnly.Danger"
+            android:layout_width="@dimen/icon_button_size"
+            android:layout_height="@dimen/icon_button_size"
+            android:layout_marginStart="@dimen/space_sm"
+            android:contentDescription="@string/action_reject"
+            app:icon="@drawable/ic_close" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Navegación del rol Administrador. -->
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_admin"
+    app:startDestination="@id/dashboardFragment">
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.jmariodev.agrodigital.ui.admin.dashboard.AdminDashboardFragment"
+        android:label="@string/nav_admin_panel"
+        tools:layout="@layout/fragment_admin_dashboard" />
+
+    <fragment
+        android:id="@+id/usersFragment"
+        android:name="com.jmariodev.agrodigital.ui.admin.users.AdminUsersFragment"
+        android:label="@string/nav_users_management"
+        tools:layout="@layout/fragment_admin_users">
+        <action
+            android:id="@+id/action_users_to_form"
+            app:destination="@id/userFormFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/userFormFragment"
+        android:name="com.jmariodev.agrodigital.ui.admin.users.UserFormFragment"
+        android:label="@string/user_form_new"
+        tools:layout="@layout/fragment_user_form">
+        <argument
+            android:name="userId"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/adminProductsFragment"
+        android:name="com.jmariodev.agrodigital.ui.admin.products.AdminProductsFragment"
+        android:label="@string/nav_products_moderation"
+        tools:layout="@layout/fragment_admin_products">
+        <argument
+            android:name="tab"
+            android:defaultValue="0"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_products_to_review"
+            app:destination="@id/productDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/productDetailFragment"
+        android:name="com.jmariodev.agrodigital.ui.common.product.ProductDetailFragment"
+        android:label="@string/moderation_review_title"
+        tools:layout="@layout/fragment_product_detail">
+        <argument
+            android:name="productId"
+            app:argType="string" />
+        <argument
+            android:name="mode"
+            android:defaultValue="review"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/reportsFragment"
+        android:name="com.jmariodev.agrodigital.ui.admin.reports.AdminReportsFragment"
+        android:label="@string/nav_sales_report"
+        tools:layout="@layout/fragment_admin_reports" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.jmariodev.agrodigital.ui.common.profile.ProfileFragment"
+        android:label="@string/nav_my_profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.jmariodev.agrodigital.ui.common.profile.EditProfileFragment"
+        android:label="@string/edit_profile_title"
+        tools:layout="@layout/fragment_edit_profile" />
+</navigation>

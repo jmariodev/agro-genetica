@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Barra del gráfico de ventas: la altura de la barra se calcula en código. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:gravity="bottom|center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_xs"
+        android:maxLines="1"
+        android:textAppearance="@style/TextAppearance.Agro.Label"
+        android:textColor="@color/agro_text_secondary"
+        tools:text="45M" />
+
+    <View
+        android:id="@+id/bar"
+        android:layout_width="@dimen/chart_bar_width"
+        android:layout_height="@dimen/chart_bar_max_height"
+        android:background="@drawable/bg_chart_bar" />
+
+    <TextView
+        android:id="@+id/tvLabel"
+        style="@style/Widget.Agro.Text.Caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_xs"
+        tools:text="Abr" />
+</LinearLayout>
