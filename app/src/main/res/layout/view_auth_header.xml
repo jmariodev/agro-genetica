@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Cabecera de marca reutilizada en login y registro. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingStart="@dimen/space_lg"
+    android:paddingTop="@dimen/auth_header_padding_top"
+    android:paddingEnd="@dimen/space_lg">
+
+    <ImageView
+        android:layout_width="@dimen/logo_small"
+        android:layout_height="@dimen/logo_small"
+        android:background="@drawable/bg_circle"
+        android:backgroundTint="@color/agro_white_20"
+        android:contentDescription="@string/cd_logo"
+        android:padding="@dimen/space_md"
+        android:src="@drawable/ic_leaf"
+        app:tint="@color/agro_white" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_base"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textAppearance="@style/TextAppearance.Agro.Headline"
+            android:textColor="@color/agro_white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/brand_subtitle"
+            android:textAppearance="@style/TextAppearance.Agro.Body"
+            android:textColor="@color/agro_white_70" />
+    </LinearLayout>
+</LinearLayout>

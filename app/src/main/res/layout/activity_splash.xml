@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_splash"
+    tools:context=".ui.splash.SplashActivity">
+
+    <!-- Círculos decorativos -->
+    <View
+        android:id="@+id/decorTop"
+        android:layout_width="@dimen/decor_circle_lg"
+        android:layout_height="@dimen/decor_circle_lg"
+        android:layout_marginStart="@dimen/space_lg"
+        android:layout_marginTop="@dimen/space_xxl"
+        android:background="@drawable/bg_circle_outline_white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/decorRight"
+        android:layout_width="@dimen/decor_circle_md"
+        android:layout_height="@dimen/decor_circle_md"
+        android:layout_marginTop="@dimen/space_xxl"
+        android:layout_marginEnd="@dimen/space_xl"
+        android:background="@drawable/bg_circle_outline_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/decorTop" />
+
+    <View
+        android:id="@+id/decorBottom"
+        android:layout_width="@dimen/decor_circle_lg"
+        android:layout_height="@dimen/decor_circle_lg"
+        android:layout_marginEnd="@dimen/space_base"
+        android:layout_marginBottom="@dimen/space_xxl"
+        android:background="@drawable/bg_circle_outline_white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Logo -->
+    <FrameLayout
+        android:id="@+id/logoContainer"
+        android:layout_width="@dimen/logo_circle"
+        android:layout_height="@dimen/logo_circle"
+        android:background="@drawable/bg_circle"
+        android:backgroundTint="@color/agro_white_20"
+        app:layout_constraintBottom_toTopOf="@id/tvBrand"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed">
+
+        <ImageView
+            android:layout_width="@dimen/logo_inner"
+            android:layout_height="@dimen/logo_inner"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_circle"
+            android:backgroundTint="@color/agro_white"
+            android:contentDescription="@string/cd_logo"
+            android:padding="@dimen/space_lg"
+            android:src="@drawable/ic_leaf"
+            app:tint="@color/agro_primary_dark" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tvBrand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_lg"
+        android:text="@string/brand_first"
+        android:textAppearance="@style/TextAppearance.Agro.Display"
+        android:textColor="@color/agro_white"
+        app:layout_constraintBottom_toTopOf="@id/tvBrandSecond"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logoContainer" />
+
+    <TextView
+        android:id="@+id/tvBrandSecond"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/brand_second"
+        android:textAppearance="@style/TextAppearance.Agro.Headline"
+        android:textColor="@color/agro_white"
+        app:layout_constraintBottom_toTopOf="@id/tvTagline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvBrand" />
+
+    <TextView
+        android:id="@+id/tvTagline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_lg"
+        android:text="@string/brand_tagline"
+        android:textAppearance="@style/TextAppearance.Agro.Subtitle"
+        android:textColor="@color/agro_white_70"
+        app:layout_constraintBottom_toTopOf="@id/dots"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvBrandSecond" />
+
+    <LinearLayout
+        android:id="@+id/dots"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_xxl"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTagline">
+
+        <View
+            android:layout_width="@dimen/dot_size"
+            android:layout_height="@dimen/dot_size"
+            android:background="@drawable/bg_circle"
+            android:backgroundTint="@color/agro_white_20" />
+
+        <View
+            android:layout_width="@dimen/dot_size"
+            android:layout_height="@dimen/dot_size"
+            android:layout_marginStart="@dimen/space_sm"
+            android:background="@drawable/bg_circle"
+            android:backgroundTint="@color/agro_white_70" />
+
+        <View
+            android:layout_width="@dimen/dot_size"
+            android:layout_height="@dimen/dot_size"
+            android:layout_marginStart="@dimen/space_sm"
+            android:background="@drawable/bg_circle"
+            android:backgroundTint="@color/agro_white" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Flujo transversal de autenticación (todos los roles). -->
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_auth"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.jmariodev.agrodigital.ui.auth.LoginFragment"
+        android:label="@string/login_title"
+        tools:layout="@layout/fragment_auth_login">
+        <action
+            android:id="@+id/action_login_to_register"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_login_to_recover"
+            app:destination="@id/recoverPasswordFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.jmariodev.agrodigital.ui.auth.RegisterFragment"
+        android:label="@string/register_title"
+        tools:layout="@layout/fragment_auth_register">
+        <action
+            android:id="@+id/action_register_to_biometric"
+            app:destination="@id/biometricSetupFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/recoverPasswordFragment"
+        android:name="com.jmariodev.agrodigital.ui.auth.RecoverPasswordFragment"
+        android:label="@string/recover_header"
+        tools:layout="@layout/fragment_auth_recover" />
+
+    <fragment
+        android:id="@+id/biometricSetupFragment"
+        android:name="com.jmariodev.agrodigital.ui.auth.BiometricSetupFragment"
+        android:label="@string/biometric_header"
+        tools:layout="@layout/fragment_auth_biometric_setup" />
+</navigation>
